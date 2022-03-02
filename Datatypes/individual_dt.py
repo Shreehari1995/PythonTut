@@ -7,3 +7,5 @@ c = int()
 d = 0
 print(a, b, c)
 
+""" float numbers """
+
