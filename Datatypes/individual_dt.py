@@ -9,3 +9,5 @@ print(a, b, c)
 
 """ float numbers """
 
+a = 10.0
+
