@@ -429,12 +429,10 @@ print(s)
 sentence = "hai good afternoon , welcome to afternoon session"
 l = []
 words = sentence.split()
-
 for word in words:
     item = word, len(word)
     l.append(item)
 print(l)
-
 
 #################################################################
 # create a dictionary with word and length pair only if the word is starting
