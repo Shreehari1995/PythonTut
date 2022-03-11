@@ -1,6 +1,4 @@
-"""
 # create a dictionary with word and its length pair
-
 sentence = "hello good afternoon"
 words = sentence.split()
 d = {}
@@ -10,10 +8,10 @@ for word in words:
 print(d)
 
 # comprehension
-
 d = {word: len(word) for word in words}
 print(d)
 
+#############################################################################
 # create a dictionary with word and its length pair only if it is of even length
 sentence = "hello good afternoon"
 words = sentence.split()
@@ -26,20 +24,22 @@ print(d)
 
 d = {word: len(word) for word in words if len(word) % 2 != 0}
 print(d)
-"""
 
+########################################################################
 # index and word -> if the word is even, keep it as it is else reverse it
 
 sentence = "hello good afternoon"
 words = sentence.split()
 d = {}
 
-# for i in range(len(words)):
-#     if len(words[i]) % 2 == 0:
-#         d[i] = words[i]
-#     else:
-#         d[i] = words[i][::-1]
+# using range()
+for i in range(len(words)):
+    if len(words[i]) % 2 == 0:
+        d[i] = words[i]
+    else:
+        d[i] = words[i][::-1]
 
+# using enumerate()
 for index, item in enumerate(words):
     if len(item) % 2 == 0:
         d[index] = item
@@ -48,7 +48,6 @@ for index, item in enumerate(words):
 print(d)
 
 # comprehension
-
 d = {index: item if len(item) % 2 == 0 else item[::-1] for index, item in enumerate(words)}
 print(d)
 

@@ -1,4 +1,3 @@
-"""
 # check if the number is prime or not
 num = 9
 
@@ -9,8 +8,8 @@ for i in range(2, num):
 else:
     print("number is prime ")
 
+#################################################################
 # prime number series
-
 for num in range(10):
     if num > 1:
         for i in range(2, num):
@@ -19,6 +18,7 @@ for num in range(10):
         else:
             print(num, end=" ")
 
+###############################################################
 # print nth prime number
 num = 0
 count = 0
@@ -35,8 +35,8 @@ while count < x:
                 print(num)
     num += 1
 
+################################################################
 # print first 10 fibonacci numbers
-
 a = 0
 b = 1
 
@@ -46,9 +46,8 @@ for _ in range(10):
     a = b
     b = c
 
-
+###############################################################
 # print nth fibonacci number
-
 a = 0
 b = 1
 n = 5
@@ -58,16 +57,16 @@ for _ in range(n-1):
 
 print(f"The {n}th fibonacci number is: {a}")
 
+################################################################
 # to generate fibonacci series till the number 10
-
 a = 0
 b = 1
 
 while a < 15:
     print(a, end=" ")
     a, b = b, a + b
-"""
 
+####################################################################
 # largest number in the given list
 l = [98, 14, 62, 17, 56, 1, 5, 96]
 
@@ -81,9 +80,9 @@ i = 3 : [14, 62, 17, 56, 98]
 for i in range(len(l)-1):
     if l[i] > l[i+1]:
         l[i], l[i+1] = l[i+1], l[i]
-# print(l[-1])
+print(l[-1])
 
-"""
+####################################################################
 # print nth largest number
 
 l = [98, 14, 62, 17, 56, 1, 5, 96]
@@ -95,17 +94,17 @@ for _ in range(n):
             l[i], l[i+1] = l[i+1], l[i]
 print(l[-n])
 
-"""
-# to sort the list in ascending order without using inbuilt method
 
-l = [98, 14, 62, 17, 56, 1, 5, 96]
 
-for _ in range(len(l)-1):
-    for i in range(len(l)-1):
-        if l[i] > l[i+1]:
-            l[i], l[i+1] = l[i+1], l[i]
 
-# print(l)
+
+
+
+
+
+
+
+
 
 
 

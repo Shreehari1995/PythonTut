@@ -1,6 +1,4 @@
-"""
 # to create a list of even numbers from 1 to 50
-
 l = []
 for i in range(1, 51):
     if i % 2 == 0:
@@ -11,8 +9,8 @@ print(l)
 l = [i for i in range(1, 51) if i % 2 == 0]
 print(l)
 
+#######################################################################
 # create a list with the words starting with vowel in th string
-
 string = "hello everyone it is Thursday"
 words = string.split()
 l = []
@@ -26,20 +24,20 @@ print(l)
 l = [word for word in words if word[0] in "aeiouAEIOU"]
 print(l)
 
+########################################################################
 # create a list of tuples of word and length pair from the given string
 string = "hello everyone it is Thursday"
-
 l = []
 
 for word in string.split():
     l.append((word, len(word)))
-# print(l)
+print(l)
 
 # comprehension
 l = [(word, len(word)) for word in string.split()]
-# print(l)
+print(l)
 
-"""
+#########################################################################
 # create a list with words - if even length add it as it is else reverse and add
 
 string = "hello everyone it is Thursday"
@@ -54,22 +52,6 @@ for word in words:
 
 print(l)
 
+# comprehension
 l = [word if len(word) % 2 == 0 else word[::-1] for word in words]
-# print(l)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(l)
