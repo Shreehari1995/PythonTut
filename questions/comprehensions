@@ -1,0 +1,22 @@
+names = List of even numbers between range 1-50
+"Returns a list names starting with vowels in the given string
+names = ['laura', 'steve', 'bill', 'james', 'bob', 'greig', 'scott', 'alex', 'ive']"
+"Filtering all the languages which starts with 'p'
+languages = ['Python', 'Java', 'Perl', 'PHP', 'Python', 'JS', 'C++', 'JS', 'Python', 'Ruby']"
+Names starting with consonants
+"Filtering out those names which are less than 6 characters
+names = ['apple', 'google', 'yahoo', 'gmail', 'flipkart', 'instagram', 'microsoft']"
+Raise to the power of list index
+a = [1, 2, 3, 4, 5]
+"Build a list of tuples with string and its length pair
+names = ['apple', 'google', 'yahoo', 'facebook', 'yelp', 'flipkart', 'gmail', 'instagram', 'microsoft']"
+"Build a list with only with even length string
+names = ['apple', 'google', 'yahoo', 'facebook', 'yelp', 'flipkart', 'gmail', 'instagram', 'microsoft']"
+Generating List of PI values
+List comprehension to sum the factorial of numbers from 1-5
+"Reverse the item of a list if the item is of odd length string
+names = ['apple', 'google', 'yahoo', 'facebook', 'yelp', 'flipkart', 'gmail', 'instagram', 'microsoft']"
+Reverse the item of a list if the item is of odd length string otherwise keep the item as is!.
+names = ['apple', 'google', 'yahoo', 'facebook', 'yelp', 'flipkart', 'gmail', 'instagram', 'microsoft']"
+Reverse the string if the string is of odd length, otherwise keep it as is.
+names = ['apple', 'google', 'yahoo', 'facebook', 'yelp', 'flipkart', 'gmail', 'instagram', 'microsoft']"
