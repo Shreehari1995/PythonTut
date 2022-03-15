@@ -15,3 +15,4 @@
 # print("I am", b, "years old", sep="&&")
 
 # print(sep="@", "hai", "hello")  # SyntaxError
+
