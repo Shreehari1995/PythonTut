@@ -160,7 +160,7 @@ def recursive_fibonacci(n):
 n_terms = int(input("enter the range of fibonacci series: "))
 
 # check if the number of terms is valid
-if n_terms <= 0:
+if n_terms < 0:
     print("Invalid input ! Please input a positive value")
 else:
     print("Fibonacci series:")
