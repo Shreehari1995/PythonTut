@@ -202,24 +202,110 @@ l = 5
 
 ######################################################################
 # to print last 'n' lines from a file
-n = 2
-with open("sample.txt") as file:
-    count = 0
-    for _ in file:
-        count += 1
-    file.seek(0)
-    lines = islice(file, count - n, count)
-    for line in lines:
-        print(line)
+# n = 2
+# with open("sample.txt") as file:
+#     count = 0
+#     for _ in file:
+#         count += 1
+#     file.seek(0)
+#     lines = islice(file, count - n, count)
+#     for line in lines:
+#         print(line)
 
 # deque()
 from collections import deque
 
-with open("sample.txt") as file:
-    d = deque(file, n)
-    for line in d:
-        print(line)
+# with open("sample.txt") as file:
+#     d = deque(file, n)
+#     for line in d:
+#         print(line)
 ##################################################################
+
+# ip addresses and their count
+
+with open("access-log.txt") as file:
+    d = {}
+    for line in file:
+        if line.strip():
+            data = line.split()
+            if data[0] not in d:
+                d[data[0]] = 1
+            else:
+                d[data[0]] += 1
+# print(d)
+# print(dict(sorted(d.items(), key=lambda item: item[-1])))
+
+# most occurring brand names
+d = {}
+with open("data.txt") as file:
+    for line in file:
+        if line.strip():
+            words = line.split("\t")
+            if words[0] not in d:
+                d[words[0]] = 1
+            else:
+                d[words[0]] += 1
+
+min_, *rest, max_ = sorted(d.items(), key=lambda item: item[-1])
+# print(max_)
+
+from collections import Counter, defaultdict
+
+with open("data.txt") as file:
+    l = []
+    for line in file:
+        if line.strip():
+            words = line.split('\t')
+            l.append(words[0])
+
+c = Counter(l)
+# print(c)
+# print(c.most_common(1))
+
+########################################################################
+
+with open("sample.log") as file:
+    d = {}
+    for line in file:
+        if line.strip():
+            words = line.split()
+            if words[2] not in d:
+                d[words[2]] = 1
+            else:
+                d[words[2]] += 1
+
+# print(d)
+
+########################################################################
+# names of the countries
+with open("football.txt", encoding="UTF-8") as file:
+    print(file)
+    d = defaultdict(int)
+    for line in file:
+        if line.strip():
+            words = line.split("\t")
+            d[words[1]] += 1
+
+# print(d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
