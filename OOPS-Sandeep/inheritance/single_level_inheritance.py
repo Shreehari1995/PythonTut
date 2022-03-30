@@ -75,7 +75,8 @@ c2 = Child2(20)
 * with parent class functionality
 """
 
-# partial overriding
+# partial overriding - adding additional functionality along with parent class's
+# functionality
 class Child3(Parent):
 
     def __init__(self, value):
