@@ -22,11 +22,11 @@ print(os.getcwd())
 
 # creating a file
 
-# os.mkdir("example.py")
-# os.rmdir("example.py")
+# os.mkdir("overriding_class_variable.py")
+# os.rmdir("overriding_class_variable.py")
 
 # removing a file
-# os.remove("example.py")
+# os.remove("overriding_class_variable.py")
 
 path = r"C:\Users\Vidyashree M C\PycharmProjects\Alpha4\files\sample.txt"
 

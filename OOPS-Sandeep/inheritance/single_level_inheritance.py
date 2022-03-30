@@ -1,6 +1,13 @@
+""
 """
 * Inheritance - deriving the properties of one class to another to modify the other class
-* all the attributes will be inherited by the Child class
+* All the attributes will be inherited by the Child class
+
+            Parent
+               ^
+               |
+               |
+            class
 """
 
 class Parent:
@@ -48,6 +55,7 @@ class Child1(Parent):
 
     def __init__(self, value): # overriding parent class constructor
         super().__init__(value) # super() is used to access parent class attribute
+        # Parent.__init__(self, value)
 
     # independent method in Child1
     def yahoo(self):
@@ -89,9 +97,18 @@ class Child3(Parent):
 
 c3 = Child3(12)
 
+#######################################################################
+# child class having an extra attribute
 
+class Child4(Parent):
 
+    def __init__(self, value, a, b):
+        self.a = a
+        self.b = b
+        super().__init__(value)     # Parent.__init__(self, value)
 
+    def demo(self):
+        print(self.a, self.b, self.value)
 
 
 
