@@ -1,6 +1,13 @@
 ""
 """
-
+Hierarchical inheritance
+* It is a type of inheritance in which a single base/parent class will be 
+  derived/inherited by more than one child classes.
+                            
+                                Parent
+                                   |
+                            |             |
+                        Child1          Child2
 """
 
 class Parent:
