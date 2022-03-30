@@ -39,14 +39,14 @@ class BankAccount:
 
 c1 = BankAccount("Steve", 1000)
 c2 = BankAccount("Bill", 2000)
-c1.deposit(500)     # BankAccount.deposit(c1, 500)
-c2.withdraw(500)     # BankAccount.withdraw(c2, 500)
-c1.statement()
-c1.transfer(500, c2)   # c1 calls transfer method in turn c2 calls deposit method
+# c1.deposit(500)     # BankAccount.deposit(c1, 500)
+# c2.withdraw(500)     # BankAccount.withdraw(c2, 500)
+# c1.statement()
+# c1.transfer(500, c2)   # c1 calls transfer method in turn c2 calls deposit method
 # inside transfer()
 
 
 # Accessing class variables
-print(c1.__class__.interest_rate)
-print(BankAccount.interest_rate)
+# print(c1.__class__.interest_rate)
+# print(BankAccount.interest_rate)
 

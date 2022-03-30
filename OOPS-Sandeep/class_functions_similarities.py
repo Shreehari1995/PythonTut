@@ -58,5 +58,5 @@ class Point:
         self.c = c
 
 """ In the above example only the init() with 3 arguments will be considered
-and it is possible to access the init() with 2 arguments"""
+and it is not possible to access the init() with 2 arguments"""
 
