@@ -8,7 +8,7 @@ class Spam:
         print(f"Apple {self.__class__.a}")
 
 """
-* using self.__class__.a will take the address of the invoking objects class
+* using self.__class__.a will take the address of the invoking object's class
   and not the class in which it is present.
 * If will use Spam.a instead of self.__class__.a, no matter whichever object 
   might be calling that variable, it will always get spam class' variable a

@@ -5,6 +5,7 @@ class Point:
         self.a = a
         self.b = b
 
+
 # passing positional arguments
 p1 = Point(1, 2)    # Point.__init__(p1, 3, 4)
 p2 = Point(3, 4)    # Point.__init__(p2, 3, 4)
@@ -56,6 +57,7 @@ class Point:
         self.a = a
         self.b = b
         self.c = c
+
 
 """ In the above example only the init() with 3 arguments will be considered
 and it is not possible to access the init() with 2 arguments"""
