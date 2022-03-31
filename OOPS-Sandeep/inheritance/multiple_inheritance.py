@@ -12,10 +12,13 @@ or the parent class written first for inheriting will be considered.
 an attribute in an inheritance hierarchy
     - MRO in multiple inheritance will always be from right to left
     
+                Parent1             Parent2
+                    |                   |
+                               |
+                            Child
+    
 """
-
 # only one parent class having constructor
-
 class Parent:
     def __init__(self, value):
         self.value = value

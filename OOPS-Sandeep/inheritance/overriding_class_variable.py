@@ -14,11 +14,13 @@ class Spam:
   might be calling that variable, it will always get spam class' variable a
 """
 
+
 class Demo(Spam):
     a = 20
 
     def google(self):
         print("google")
+
 
 d = Demo()
 print(d.a)  # 20
