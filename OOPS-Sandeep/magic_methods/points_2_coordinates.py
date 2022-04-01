@@ -31,6 +31,7 @@ class Point:
         raise Exception()
 
 
+
 p1 = Point(1, 2)
 print(p1.__dict__)
 p2 = Point(1.5, 3.4)
