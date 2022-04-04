@@ -85,11 +85,11 @@ class Calculator:
     def a(self, value):
         if not isinstance(value, (int, float)):
             raise TypeError()
-        self._a = value
+        self._a = value     # __setattr__()
 
     @property
     def b(self):
-        return self._b
+        return self._b      # __getattribute__()
 
     @b.setter
     def b(self, value):
