@@ -29,6 +29,31 @@ p.a = 12        # __setattr__
 
 """
 Even though __getattribute__ and __setattr__ is not present explicitly in class Points,
-they will be used by default as they are inherited from Object class.
+they will be applied by default as they are inherited from Object class.
 """
+
+
+#############################################################################
+# overriding __setattr__ of object class in child classes
+class Person:
+
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+
+    def __setattr__(self, name, value):
+        # setting uppercase of the input string
+        super().__setattr__(name, value.upper())
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
 
