@@ -53,7 +53,49 @@ for item in l:      # tea
     else:
         d[key] += [item]
 
-print(d)
+# print(d)
+#######################################################################################################
+l1 = [1, 2]
+l2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+
+def zip_(a, b):
+    res = []
+
+    if len(a) == len(b):
+        return list(zip(a, b))
+
+    else:
+        if len(a) > len(b):
+            max, min = a, b
+        else:
+            max, min = b, a
+
+        while max:
+            res += list(zip(min, max))
+            del max[:len(min)]
+
+        return res
+
+print(zip_(l1, l2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
