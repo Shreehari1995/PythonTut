@@ -155,7 +155,7 @@ def average():
     return x_total/len(data), y_total/len(data), z_total/len(data)
 
 #####################################################################################################
-# minimum
+# minimum and maximum
 
 def min_max():
     x_ = []

@@ -23,9 +23,9 @@ class PositivePoint:
         super().__setattr__(name, value)    # __setattr__ of object class
 
 
-p = PositivePoint(1, 2)
-print(p.a)      # __getattribute__ of object class
-p.a = 12        # __setattr__
+# p = PositivePoint(1, 2)
+# print(p.a)      # __getattribute__ of object class
+# p.a = 12        # __setattr__
 
 """
 Even though __getattribute__ and __setattr__ is not present explicitly in class Points,
@@ -46,6 +46,27 @@ class Person:
         super().__setattr__(name, value.upper())
 
 ###########################################################################
+class  Sample:
+
+    def __init__(self, dict_):
+        self.d = dict_      # self - {d: {"a": 1, "b": 2}}
+
+    def __getitem__(self, item):
+        return self.d[item]
+
+    def __getattribute__(self, item):
+        return self.d[item]
+
+    def __getattr__(self, item):    # it is used to access the missing attributes
+        return self.d[item]
+
+
+d = {"a": 1, "b": 2}
+
+s = Sample(d)
+print(s["a"])
+print(s.a)
+
 
 
 
