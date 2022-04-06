@@ -1,6 +1,7 @@
 import json
-class Demo:
 
+
+class Demo:
     # Instance Method - instance will be automatically passed
     def spam(self):
         print(self)
@@ -82,19 +83,19 @@ class Point:
                ("maximum values: ", max(x_), max(y_), max(z_))
 
 
+####################################################################################################
+class Circle:
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def circumference(self):
+        return 2 * 3.14 * self.radius
+
+    @classmethod
+    def from_diameter(cls, diameter):
+        radius = diameter / 2
+        return cls(radius)      # returns an instance of the same class
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+c = Circle.from_diameter(4)
