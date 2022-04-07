@@ -6,6 +6,8 @@ $ --> pattern should be at the end
 ? --> matches only 0 or 1 occurrence of the preceding character
 [] --> groups multiple characters / character set. Takes each character and checks if the character matches with one of the characters in the set(similar to in operator)
 - --> denotes range inside character set
+() --> grouping patterns
+{} --> specifies the number of characters to be matched
 
 \d --> matches any number between 0-9   or [0-9] or [0123456789]
 \D --> matches everything other than numbers or [^0-9] or [^0123456789]
@@ -31,7 +33,7 @@ re.findall("universe", greeting)
 re.findall("hello", "hello world hello there how are you")
 ['hello', 'hello']
 
-# re is case sensitive
+# re is case-sensitive
 re.findall("hello", "hello world hello there how are you Hello")
 ['hello', 'hello']
 
@@ -387,13 +389,117 @@ re.findall(r"\b\d{6}\b", "the pincode of Bangalore is 560001 and tel code is 987
     r"\b\d{6}\b" --> the pattern should be present between a word boundary i.e the number should be
                      between a character that is matched by "\W"
 
-************************ matching alphanumerics and underscore **********************************
+***************************** matching words starting with "h" **********************************
 
-re.findall(r"\w", "This is AA3456 from SFO to MIA")
-['T', 'h', 'i', 's', 'i', 's', 'A', 'A', '3', '4', '5', '6', 'f', 'r', 'o', 'm', 'S', 'F', 'O', 't', 'o', 'M', 'I', 'A']
+sentence = "hello world hi how are you happy birthday"
+re.findall(r"h[a-z]", sentence)
+['he', 'hi', 'ho', 'ha', 'hd']
 
-re.findall(r"\w", "!@#$%^&*()_+")
-['_']
+re.findall(r"h[a-z]+", sentence)
+['hello', 'hi', 'how', 'happy', 'hday']
+
+re.findall(r"\bh[a-z]+", sentence)
+['hello', 'hi', 'how', 'happy']
+
+re.findall(r"\bh[a-z]+\b", sentence)
+['hello', 'hi', 'how', 'happy']
+
+****************************** matching words starting with P and J *********************************
+sentence = "Python is a programming language. Python is easier than Java"
+re.findall(r"\b[PJ][a-zA-Z]+\b", sentence)
+['Python', 'Python', 'Java']
+
+****************************** matching words ending with "y" **************************************
+sentence = "hi how are you happy birthday flying"
+
+# without \b
+re.findall(r"[a-zA-Z]+y", sentence)
+['happy', 'birthday', 'flying']
+
+# using \b
+re.findall(r"[a-zA-Z]+y\b", sentence)
+['happy', 'birthday']
+
+******** to count the number of occurrences non-special characters in the given string ***************
+
+sentence = "hello@world! welcome!!! to Python$"
+letters = re.findall(r"[a-zA-Z]", sentence)
+c = {letter: letters.count(letter)for letter in letters}
+
+o/p
+{'h': 2, 'e': 3, 'l': 4, 'o': 5, 'w': 2, 'r': 1, 'd': 1, 'c': 1, 'm': 1, 't': 2, 'P': 1, 'y': 1, 'n': 1}
+
+************************** filtering only those characters except digits ***********************
+
+word = "@hello12world34welcome!123"
+
+s = re.findall(r"\D", word)
+filtered_string = "".join(s)
+
+o/p: '@helloworldwelcome!'
+
+******************** count the characters in each word (Ignore special characters) *****************
+
+sentence = "Hi there! How are you:) How are you doing today!"
+words = re.findall(r"[a-zA-Z]+", sentence)
+d = {word: len(word) for word in words}
+
+o/p:
+words --> ['Hi', 'there', 'How', 'are', 'you', 'How', 'are', 'you', 'doing', 'today']
+d --> {'Hi': 2, 'there': 5, 'How': 3, 'are': 3, 'you': 3, 'doing': 5, 'today': 5}
+
+****************** number of uppercase and lowercase letters **************************
+
+sentence = "Hello World Welcome To Python"
+upper_ = re.findall(r"[A-Z]", sentence)
+lower_ = re.findall(r"[a-z]", sentence)
+len(upper_)
+5
+len(lower_)
+20
+
+******************** print only those words with starting with vowels ******************************
+
+sentence = "hello hi american engineers and indian writers officers united states"
+re.findall(r"\b[aeiou][a-z]+\b", sentence)
+
+o/p:
+['american', 'engineers', 'and', 'indian', 'officers', 'united']
+
+*********************************** matching only 3 letters words *********************************
+
+sentence = "Hi there How are you How are you doing today"
+re.findall(r"\b[a-zA-Z]{3}\b", sentence)
+
+o/p:
+['How', 'are', 'you', 'How', 'are', 'you']
+
+******************************* matching either "python" or "java" ************************************
+
+sentence = "programming in python is fun and programming in java is a mess"
+re.findall(r"(python|java)", sentence)
+
+o/p:
+['python', 'java']
+
+******************************** matching words starting with "he" ***********************************
+
+sentence = "he helps the community and he is the hero"
+
+re.findall(r"\bhe[a-zA-Z]+", sentence)  >>>     ['helps', 'hero']
+re.findall(r"\bhe[a-zA-Z]*", sentence)  >>>     ['he', 'helps', 'he', 'hero']
+
+
+************************ matching words starting with "he" or "se" *******************************
+sentence = "he helps the community and he is the hero she sells sea shells on the sea shore"
+
+re.findall(r"\b(he|se)[a-zA-Z]*", sentence)
+['he', 'he', 'he', 'he', 'se', 'se', 'se']
+re.findall(r"\b(?:he|se)[a-zA-Z]*", sentence)
+['he', 'helps', 'he', 'hero', 'sells', 'sea', 'sea']
+
+
+
 
 
 
