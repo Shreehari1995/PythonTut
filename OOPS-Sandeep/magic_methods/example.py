@@ -16,4 +16,3 @@ class Sample:
 s = Sample(10, 20)
 s.a = 30
 print(s.a)
-
