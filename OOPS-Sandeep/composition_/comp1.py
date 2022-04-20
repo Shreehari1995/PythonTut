@@ -65,8 +65,3 @@ file = open("sample.txt", "w")
 t = TextFileLogger(file)
 f = FilteredLogger("error", t)
 f.log("This is an error message")
-
-
-
-
-
