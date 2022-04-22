@@ -114,15 +114,15 @@ def make_instance(row):
     return Point(float(row[0]), float(row[1]), float(row[2]))
 
 
-@memory
-def from_file():
-    records = []
-    with open("points.txt") as file:
-        for line in file:
-            parts = line.split()
-            records.append(make_instance(parts))
-
-    return records
+# @memory
+# def from_file():
+#     records = []
+#     with open("points.txt") as file:
+#         for line in file:
+#             parts = line.split()
+#             records.append(make_instance(parts))
+#
+#     return records
 
 
 data = from_file()      # data --> list of records in the form of instance of point class
