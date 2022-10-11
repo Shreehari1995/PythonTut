@@ -32,7 +32,7 @@
      sentence = "hello world welcome to python programming hi there"
      d = {'h': ['hello', 'hi'], 'w': ['world', 'welcome'], 't': ['to', 'there'], 'p': ['python', 'programming'] }
 
-**17 Write a to replace all the characters with - if the character occurs more than once in a string**
+**17 Write a program to replace all the characters with - if the character occurs more than once in a string**
      my_string = 'hellohai' # O/P should be '-e--o-ai'
 
 **18 write a decorator that returns only positive values of subtraction**

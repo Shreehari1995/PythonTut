@@ -1419,6 +1419,7 @@ Where as in tuples, memory is not over allocated, as tuples does not support app
 >>> False
 >>> print(calendar.isleap(2016))
 >>> True
+
 **85 Liner Search**
 ```python
 >>> a = list(range(20))
